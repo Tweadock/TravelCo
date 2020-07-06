@@ -1,0 +1,72 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Our Chart Page</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script>
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+
+                title: {
+                    text: "Top Ten Visited Countries in 2017"
+                },
+                axisX: {
+                    interval: 1
+                },
+                axisY2: {
+                    interlacedColor: "rgba(1,77,101,.2)",
+                    gridColor: "rgba(1,77,101,.1)",
+                    title: "Number of Visitors, in Millions"
+                },
+                data: [{
+                    type: "bar",
+                    name: "companies",
+                    axisYType: "secondary",
+                    color: "#014D65",
+                    dataPoints: [
+                        { y: 35.5, color: "red", label: "Thailand" },
+                        { y: 37.4, color: "yellow", label: "Germany" },
+                        { y: 37.6, color: "red", label: "Turkey" },
+                        { y: 37.7, color: "blue", label: "United Kingdom" },
+                        { y: 39.2, color: "green", label: "Mexico" },
+                        { y: 58.2, color: "red", label: "Italy" },
+                        { y: 60.7, color: "red", label: "China" },
+                        { y: 76.9, color: "blue", label: "United States" },
+                        { y: 81.7, color: "red", label: "Spain" },
+                        { y: 86.8, color: "blue", label: "France" },
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1>T.E.L. Travel Co.</h1>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">Sign-Up for travel deals</a></li>
+                <li><a href="#">Top Deals today!</a></li>
+                <li><a href="#">Hottest 2020 Travel Destinations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <footer id="main-footer">
+        <p>Created by TravCo! TravCo, because it was free!</p>
+    </footer>
+</body>
+</html>
